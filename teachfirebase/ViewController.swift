@@ -28,7 +28,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Retrieve the posts and listen for changes
         databaseHandle = ref?.child("Posts").observe(.childAdded, with: { (snapshot) in
-            
+        
             // Try to convert the value of the data into a string
             let post = snapshot.value as? String
             if let actualPost = post {
