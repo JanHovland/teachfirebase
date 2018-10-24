@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -45,9 +45,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         })
         
-        // Fjerner listener 
+        // Fjerner Database handle
         
-        ref?.removeAllObservers()
+        ref?.removeObserver(withHandle: databaseHandle!)
         
     }
     

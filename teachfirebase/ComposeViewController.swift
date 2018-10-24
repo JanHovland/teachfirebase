@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 class ComposeViewController: UIViewController {
 
@@ -27,9 +27,12 @@ class ComposeViewController: UIViewController {
     @IBAction func addPost(_ sender: Any) {
       
         // TODO: Post the data to Firebase
-        ref?.child("Posts").childByAutoId().setValue(textView.text)
         
+        if textView.text.count > 0 {
+      
+            ref?.child("Posts").childByAutoId().setValue(textView.text)
         
+        }
         // Dismiss the popover
         presentingViewController?.dismiss(animated: true, completion: nil)
         
