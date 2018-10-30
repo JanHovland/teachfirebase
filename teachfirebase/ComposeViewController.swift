@@ -28,13 +28,13 @@ class ComposeViewController: UIViewController {
         } else {
                     
             let postObject = [
-            "author": [
-            "uid": "12345",                     // Hard koding
-            "username": "Jan",                  // Hard koding
-            "photoURL": "google.no"             // Hard koding
-            ],
-            "text": textView.text,              // kommer fra input, må endres til et textfelt
-            "timestamp": [".sv": "timestamp"]
+                "author": [
+                    "uid": "12345",                     // Hard koding
+                    "username": "Jan",                  // Hard koding
+                    "photoURL": "google.no"             // Hard koding
+                ],
+                "text": textView.text,              // kommer fra input, må endres til et textfelt
+                "timestamp": [".sv": "timestamp"]
             ] as [String: Any]
         
             postRef.setValue(postObject, withCompletionBlock: { error, ref in
