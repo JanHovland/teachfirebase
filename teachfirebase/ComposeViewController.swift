@@ -23,26 +23,27 @@ class ComposeViewController: UIViewController {
       
         let postRef = Database.database().reference().child("posts").childByAutoId()
         
-        let postObject = [
+        if textView.text.count == 0 {
+            self.dismiss(animated: true, completion: nil)
+        } else {
+                    
+            let postObject = [
             "author": [
-                "uid": "12345",                 // Hard koding
-                "username": "Jan",              // Hard koding
-                "photoURL": "google.no"         // Hard koding
+            "uid": "12345",                     // Hard koding
+            "username": "Jan",                  // Hard koding
+            "photoURL": "google.no"             // Hard koding
             ],
-            "text": textView.text,              // kommer fra input
+            "text": textView.text,              // kommer fra input, må endres til et textfelt
             "timestamp": [".sv": "timestamp"]
-        ] as [String: Any]
+            ] as [String: Any]
         
-        if textView.hasText == true {
             postRef.setValue(postObject, withCompletionBlock: { error, ref in
                 if error == nil {
                     self.dismiss(animated: true, completion: nil)
                 } else {
-                    print(error as! String)
+                  print(error as! String)
                 }
             })
-        } else {
-           self.dismiss(animated: true, completion: nil)
         }
     }
     
