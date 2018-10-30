@@ -20,22 +20,36 @@ class ComposeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        ref = Database.database().reference()
+        // ref = Database.database().reference()
         
     }
     
     @IBAction func addPost(_ sender: Any) {
       
-        // TODO: Post the data to Firebase
+        let postRef = Database.database().reference().child("posts").childByAutoId()
         
-        if textView.text.count > 0 {
-      
-            ref?.child("Posts").childByAutoId().setValue(textView.text)
+        let postObject = [
+            "author": [
+                "uid": "12345",
+                "username": "Jan",
+                "photoURL": "google.no"
+            ],
+            "text": textView.text,
+            "timestamp": [".sv": "timestamp"]
+        ] as [String: Any]
         
+        if textView.hasText == true {
+            postRef.setValue(postObject, withCompletionBlock: { error, ref in
+                if error == nil {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    // Handle the error
+                
+                }
+            })
+        } else {
+           self.dismiss(animated: true, completion: nil)
         }
-        // Dismiss the popover
-        presentingViewController?.dismiss(animated: true, completion: nil)
-        
     }
     
     @IBAction func cancelPost(_ sender: Any) {

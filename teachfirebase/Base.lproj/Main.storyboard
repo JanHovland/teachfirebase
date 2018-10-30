@@ -102,12 +102,12 @@
                         <viewLayoutGuide key="safeArea" id="qo7-2h-zbt"/>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="eHN-hK-gVW" id="uGh-2C-okW"/>
+                        <outlet property="textView" destination="eHN-hK-gVW" id="twU-ad-1er"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cD1-td-C5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1084" y="-636"/>
+            <point key="canvasLocation" x="1025" y="-646"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="22V-cO-vcS">

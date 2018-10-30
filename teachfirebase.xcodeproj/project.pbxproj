@@ -15,6 +15,8 @@
 		D1961139217CF1B2002CDFC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1961137217CF1B2002CDFC3 /* LaunchScreen.storyboard */; };
 		D1961141217CFA2A002CDFC3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1961140217CFA2A002CDFC3 /* GoogleService-Info.plist */; };
 		D1961143217CFDCA002CDFC3 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1961142217CFDCA002CDFC3 /* ComposeViewController.swift */; };
+		D1D5F5A421888E8A00074FC8 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5F5A321888E8A00074FC8 /* Posts.swift */; };
+		D1D5F5A621888EEC00074FC8 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D5F5A521888EEC00074FC8 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D196113A217CF1B2002CDFC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1961140217CFA2A002CDFC3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1961142217CFDCA002CDFC3 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		D1D5F5A321888E8A00074FC8 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		D1D5F5A521888EEC00074FC8 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		D196112D217CF1AE002CDFC3 /* teachfirebase */ = {
 			isa = PBXGroup;
 			children = (
+				D1D5F5A221888DFB00074FC8 /* Model */,
 				D196112E217CF1AE002CDFC3 /* AppDelegate.swift */,
 				D1961130217CF1AE002CDFC3 /* ViewController.swift */,
 				D1961132217CF1AE002CDFC3 /* Main.storyboard */,
@@ -92,6 +97,15 @@
 				D196113A217CF1B2002CDFC3 /* Info.plist */,
 			);
 			path = teachfirebase;
+			sourceTree = "<group>";
+		};
+		D1D5F5A221888DFB00074FC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5F5A321888E8A00074FC8 /* Posts.swift */,
+				D1D5F5A521888EEC00074FC8 /* UserProfile.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +235,9 @@
 			files = (
 				D1961143217CFDCA002CDFC3 /* ComposeViewController.swift in Sources */,
 				D1961131217CF1AE002CDFC3 /* ViewController.swift in Sources */,
+				D1D5F5A621888EEC00074FC8 /* UserProfile.swift in Sources */,
 				D196112F217CF1AE002CDFC3 /* AppDelegate.swift in Sources */,
+				D1D5F5A421888E8A00074FC8 /* Posts.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
