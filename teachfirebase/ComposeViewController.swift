@@ -17,11 +17,6 @@ class ComposeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        // ref = Database.database().reference()
-        
     }
     
     @IBAction func addPost(_ sender: Any) {
@@ -30,11 +25,11 @@ class ComposeViewController: UIViewController {
         
         let postObject = [
             "author": [
-                "uid": "12345",
-                "username": "Jan",
-                "photoURL": "google.no"
+                "uid": "12345",                 // Hard koding
+                "username": "Jan",              // Hard koding
+                "photoURL": "google.no"         // Hard koding
             ],
-            "text": textView.text,
+            "text": textView.text,              // kommer fra input
             "timestamp": [".sv": "timestamp"]
         ] as [String: Any]
         
@@ -43,8 +38,7 @@ class ComposeViewController: UIViewController {
                 if error == nil {
                     self.dismiss(animated: true, completion: nil)
                 } else {
-                    // Handle the error
-                
+                    print(error as! String)
                 }
             })
         } else {
@@ -60,14 +54,4 @@ class ComposeViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
