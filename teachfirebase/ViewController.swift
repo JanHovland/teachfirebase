@@ -14,7 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var ref: DatabaseReference?
-    var databaseHandle: DatabaseHandle?
+//    var databaseHandle: DatabaseHandle?
     
     var posts = [Post]()
 
